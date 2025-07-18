@@ -6,6 +6,11 @@
     <title>Authentification</title>
   </head>
   <body>
+     <script>
+                    if(localStorage.getItem('connected')){
+          location = "./welcome.html";
+        }
+     </script>
     <h2>Numero whatsapp :</h2>
     <div class="phone-input">
       <span class="country-code">+243</span>
@@ -20,9 +25,6 @@
     <div id="msg"></div>
 
     <script>
-        if(localStorage.getItem('connected')){
-          location = "./welcome.html";
-        }
 
       function validateNumber(input) {
         const val = input.trim();
