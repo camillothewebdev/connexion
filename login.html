@@ -38,14 +38,14 @@
         const msg = document.getElementById("msg");
         let number = document.getElementById("number").value.trim();
         if (!number) {
-          msg.textContent = "Entrez le numero svp";
+          msg.textContent = "Entrez votre numero Whatsapp svp";
           setTimeout(() => {
             msg.textContent = "";
           }, 1700);
           return;
         }
         if (!validateNumber(number)) {
-          msg.textContent = "Le numero est incorrect";
+          msg.textContent = "Ce numero est incorrect";
           setTimeout(() => {
             msg.textContent = "";
           }, 1700);
