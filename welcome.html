@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+        <script>
+          if(!localStorage.getItem('connected')){
+          location = "./login.html";
+        }
+            </script>
     <center>
       <h1>Bienvenue</h1>
       <p>Vous etes authentifié</p>
@@ -14,9 +19,6 @@
       <a onclick="logout()">Se deconnecter</a>
     </center>
     <script>
-          if(!localStorage.getItem('connected')){
-          location = "./login.html";
-        }
       function logout(){
         localStorage.removeItem('connected');
         location = "./login.html"
