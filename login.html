@@ -20,12 +20,9 @@
     <div id="msg"></div>
 
     <script>
-        (async()=>{
-        await fetch("https://congosoft-auth.onrender.com/wake-up");
         if(localStorage.getItem('connected')){
           location = "./welcome.html";
         }
-      })()
 
       function validateNumber(input) {
         const val = input.trim();
