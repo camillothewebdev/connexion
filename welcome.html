@@ -14,12 +14,9 @@
       <a onclick="logout()">Se deconnecter</a>
     </center>
     <script>
-         (async()=>{
-        await fetch("https://congosoft-auth.onrender.com/wake-up");
-        if(!localStorage.getItem('connected')){
+          if(!localStorage.getItem('connected')){
           location = "./login.html";
         }
-      })()
       function logout(){
         localStorage.removeItem('connected');
         location = "./login.html"
