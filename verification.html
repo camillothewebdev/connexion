@@ -14,12 +14,9 @@
     <div id="msg"></div>
 
     <script>
-         (async()=>{
-        await fetch("https://congosoft-auth.onrender.com/wake-up");
-        if(localStorage.getItem('connected')){
+         if(localStorage.getItem('connected')){
           location = "./welcome.html";
         }
-      })()
       const urlParams = new URLSearchParams(window.location.search);
       const number = urlParams.get("number");
       const msg = document.getElementById("msg");
