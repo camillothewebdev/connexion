@@ -38,17 +38,17 @@
         const msg = document.getElementById("msg");
         let number = document.getElementById("number").value.trim();
         if (!number) {
-          msg.textContent = "Veuillez entrer votre numero whatsapp";
+          msg.textContent = "Entrez le numero svp";
           setTimeout(() => {
             msg.textContent = "";
-          }, 3000);
+          }, 1700);
           return;
         }
         if (!validateNumber(number)) {
-          msg.textContent = "Le numero est incorrect, veuillez réessayer";
+          msg.textContent = "Le numero est incorrect";
           setTimeout(() => {
             msg.textContent = "";
-          }, 3000);
+          }, 1700);
           return;
         }
 
@@ -61,13 +61,15 @@
         });
         const data = await res.json();
         if (data.success) {
-          window.location =
+          setTimeout(()=>{
+              window.location =
             "./verification.html?number=" + encodeURIComponent(number);
+          }, 2000);
         } else {
           msg.textContent = "Ce numbero n'est pas sur Whatsapp";
           setTimeout(() => {
             msg.textContent = "";
-          }, 3000);
+          }, 1700);
         }
       }
     </script>
