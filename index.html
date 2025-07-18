@@ -39,15 +39,11 @@
     <div  class="loader"></div>
     <p>Chargement en cours...</p>
     <script>
-      (async()=>{
-        await fetch("https://congosoft-auth.onrender.com/wake-up");
-        if(localStorage.getItem('connected')){
+         if(localStorage.getItem('connected')){
           location = "./welcome.html";
         }else{
           location = "./login.html";
         }
-      })()
-
     </script>
   </body>
 </html>
